@@ -12,13 +12,21 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput() ?>
+    <?= $form->field($model, 'product_id')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'sn')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'box_cod')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'detail')->textInput() ?>
 
-    <?= $form->field($model, 'product_data_id')->textInput() ?>
+    <?= $form->field($model, 'status')->textInput() ?>
+
+    <?= $form->field($model, 'is_gs')->textInput() ?>
+
+    <?= $form->field($model, 'is_rma')->textInput() ?>
+
+    <?= $form->field($model, 'started_at')->textInput() ?>
+
+    <?= $form->field($model, 'packed_at')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
